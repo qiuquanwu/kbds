@@ -25,3 +25,11 @@ $router->post('/upload','ApiController@upload');
 $router->post('/addSchool',['middleware' => 'token','uses'=>'ApiController@addSchool']);
 /*添加学校*/
 $router->post('/getSchool',['middleware' => 'token','uses'=>'ApiController@getSchool']);
+$router->post('/getMajors',['middleware' => 'token','uses'=>'ApiController@getMajorsBySchoolId']);
+$router->post('/addMajor',['middleware' => 'token','uses'=>'ApiController@addMajor']);
+$router->post('/delMajor',['middleware'=>'token','uses'=>'ApiController@delMajor']);
+$router->post('/getClassList',['middleware'=>'token','uses'=>'ApiController@getClassList']);
+// 根据id获取专业的名称
+$router->post('/getClassById',['middleware'=>'token','uses'=>'ApiController@getClassById']);
+
+
